@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Salud Total</title>
+  <link rel="stylesheet" href="paciente.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="imagenes/logo.png" alt="Logo">
+        <h2>Clínica Salud Total</h2>
+        <p>Gestión Médica</p>
+      </div>
+      <nav>
+        <ul>
+          <li class="active">🏠 Dashboard</li>
+          <li>📅 Citas</li>
+          <li>💊 Mis Recetas</li>
+          <li>📄 Resultados</li>
+          <li>💳 Pagos</li>
+          <li>🔔 Notificaciones</li>
+          <li>⚙️ Configuración</li>
+        </ul>
+      </nav>
+      <div class="user">
+        <div class="avatar">DSS</div>
+        <div>
+          <p><strong>Paciente 01</strong></p>
+        </div>
+        <a href="index.html" class="btn-logout">Cerrar Sesión</a>
+
+
+<script>
+function cerrarSesion() {
+    // Aquí puedes limpiar datos del navegador (si usas localStorage o sessionStorage)
+    sessionStorage.clear();
+    localStorage.clear();
+
+    // Redirigir al login
+    window.location.href = "index.html";
+}
+</script>
+
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main">
+      <header>
+        <h1>Bienvenido</h1>
+        <p>Resumen de actividad - viernes, 12 de septiembre de 2025</p>
+      </header>
+
+      <!-- Tarjetas -->
+      <section class="cards">
+        <div class="card">
+          <h3>Tus próximas citas</h3>
+          <p class="number">1 cita programada</p>
+        </div>
+        <div class="card">
+          <h3>Tus recetas activas</h3>
+          <p class="number">2 recetas vigentes</p>
+        </div>
+        <div class="card">
+          <h3>Resultados de laboratorio</h3>
+          <p class="number">1 nuevo resultado disponible</p>
+          
+        </div>
+        <div class="card">
+          <h3>Pagos pendientes</h3>
+          <p class="number">1 factura pendiente</p>          
+        </div>
+      </section>
+
+      <!-- Paneles -->
+      <section class="bottom">
+        <!-- Panel Citas Pendientes -->
+        <div class="panel">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Citas Pendientes Hoy
+          </h3>
+          <div class="empty">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="40" height="40">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <p>No hay citas programadas para hoy</p>
+          </div>
+        </div>
+
+        <!-- Panel Actividad Reciente -->
+        <div class="card activity-card">
+  <h3><i class="fas fa-sync-alt"></i> Actividad Reciente</h3>
+  <hr>
+  <div class="activity-item">
+    <span class="status green"></span>
+    <div class="activity-text">
+      <p>Tu cita con el Dr. Pando fue confirmada</p>
+      <span class="time">Hace 2 horas</span>
+    </div>
+  </div>
+  <div class="activity-item">
+    <span class="status blue"></span>
+    <div class="activity-text">
+      <p>Tu receta médica ha sido actualizada</p>
+      <span class="time">Hace 1 día</span>
+    </div>
+  </div>
+  <div class="activity-item">
+    <span class="status yellow"></span>
+    <div class="activity-text">
+      <p>Tienes una factura pendiente</p>
+      <span class="time">Hace 4 días</span>
+    </div>
+  </div>
+  <div class="activity-item">
+    <span class="status purple"></span>
+    <div class="activity-text">
+      <p>Pago registrado: Consulta 10/09</p>
+      <span class="time">Hace 5 días</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

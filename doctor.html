@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel del Doctor - Clínica Salud Total</title>
+  <link rel="stylesheet" href="doctor.css">
+  <link rel="icon" href="imagenes/logo.png" type="image/png">
+</head>
+<body>
+
+<header class="sticky-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="imagenes/logo.png" alt="Clínica Salud Total" class="logo-img">
+      <h1>Panel Doctor</h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="#citas">Mis Citas</a>
+      <a href="#historial">Historial Médico</a>
+      <a href="#diagnosticos">Diagnósticos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="doctor-panel" class="container">
+
+  <!-- Citas del Doctor -->
+  <section id="citas" class="doctor-section">
+    <h2>Próximas Citas</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan Pérez</td>
+            <td>20/09/2025</td>
+            <td>10:00 AM</td>
+            <td><button class="btn">Ver</button></td>
+          </tr>
+          <tr>
+            <td>María López</td>
+            <td>21/09/2025</td>
+            <td>2:00 PM</td>
+            <td><button class="btn">Ver</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Historial Médico -->
+  <section id="historial" class="doctor-section">
+    <h2>Historial Médico</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>Última consulta</th>
+            <th>Diagnóstico</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan Pérez</td>
+            <td>10/08/2025</td>
+            <td>Hipertensión</td>
+            <td><button class="btn">Ver</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Registro de Diagnósticos -->
+  <section id="diagnosticos" class="doctor-section">
+    <h2>Registrar Diagnóstico</h2>
+    <form>
+      <div class="form-grid">
+        <input type="text" placeholder="Nombre del paciente" required>
+        <textarea placeholder="Observaciones médicas" rows="4" required></textarea>
+        <input type="date" required>
+      </div>
+      <button type="submit" class="btn">Guardar Diagnóstico</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Clínica Salud Total. Panel del Doctor.</p>
+  </div>
+</footer>
+
+</body>
+</html>

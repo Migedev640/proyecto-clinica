@@ -1,0 +1,272 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #1e3a8a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+  background: #2563eb;
+}
+
+.sidebar .user {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  background: #cbd5e1;
+  color: #111827;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* 🔴 Botón de cerrar sesión bonito */
+.btn-logout {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 10px 22px;
+  background: #e74c3c;   /* rojo elegante */
+  color: #fff;
+  border: none;
+  border-radius: 30px;   /* redondeado */
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+.btn-logout:hover {
+  background: #c0392b;  /* rojo más oscuro */
+  transform: scale(1.05); /* efecto zoom */
+  box-shadow: 0 6px 14px rgba(192, 57, 43, 0.4);
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header p {
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.card .number {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card .change {
+  font-size: 14px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.card .positive { color: #16a34a; }
+.card .neutral { color: #2563eb; }
+
+/* Bottom panels */
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.panel h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 30px;
+}
+
+.empty svg {
+  margin-bottom: 10px;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #374151;
+}
+
+.activity-list .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.activity-list .green { background: #22c55e; }
+.activity-list .blue { background: #3b82f6; }
+.activity-list .yellow { background: #eab308; }
+.activity-list .purple { background: #a855f7; }
+.activity-card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.activity-card h3 {
+  font-size: 16px;
+  color: #1e3c72;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.activity-card hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 10px 0 20px 0;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.status.green { background: #22c55e; }
+.status.blue { background: #3b82f6; }
+.status.yellow { background: #facc15; }
+.status.purple { background: #a855f7; }
+
+.activity-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.activity-text .time {
+  font-size: 12px;
+  color: #777;
+  margin-top: 3px;
+}

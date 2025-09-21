@@ -1,0 +1,155 @@
+/* General */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.sticky-header {
+  background: #1e3c72;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+}
+
+.nav-menu a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Secciones */
+#doctor-panel {
+  padding: 40px 0;
+}
+
+.doctor-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.doctor-section h2 {
+  color: #1e3c72;
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  border-left: 5px solid #2a5298;
+  padding-left: 10px;
+}
+
+/* Tablas */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+table th, table td {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background: #2a5298;
+  color: #fff;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Botones */
+.btn {
+  background: #2a5298;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 2px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1e3c72;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fafafa;
+}
+
+input:focus, textarea:focus {
+  border-color: #2a5298;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Footer */
+.footer {
+  background: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  border-top: 3px solid #2a5298;
+}

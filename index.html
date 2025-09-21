@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinica Salud Total - Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <h2>Clínica Salud Total</h2>
+      <p>Ingresa a tu cuenta</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input type="name" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit">Ingresar</button>
+      </form>
+
+      <p id="mensaje" class="footer-text"></p>
+
+      <div class="usuarios-prueba">
+        <p><strong>Usuarios de prueba:</strong></p>
+        <ul>
+          <li><b>Doctor:</b> doctor@clinica.com / doctor123</li>
+          <li><b>Paciente:</b> paciente@clinica.com / paciente123</li>
+          <li><b>Admin:</b> admin@clinica.com / admin123</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const usuarios = {
+      "doctor@clinica.com": { rol: "Doctor", password: "doctor123", redir: "doctor.html" },
+      "paciente@clinica.com": { rol: "Paciente", password: "paciente123", redir: "paciente.html" },
+      "admin@clinica.com": { rol: "Administrador", password: "admin123", redir: "admin.html" }
+    };
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const correo = document.getElementById("usuario").value;
+      const password = document.getElementById("password").value;
+      const mensaje = document.getElementById("mensaje");
+
+      if (usuarios[correo] && usuarios[correo].password === password) {
+        mensaje.style.color = "green";
+        mensaje.textContent = `Bienvenido ${usuarios[correo].rol}`;
+        setTimeout(() => {
+          window.location.href = usuarios[correo].redir;
+        }, 1500);
+      } else {
+        mensaje.style.color = "red";
+        mensaje.textContent = "Correo o contraseña incorrectos.";
+      }
+    });
+  </script>
+</body>
+</html>

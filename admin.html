@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de Administración - Clínica Salud Total</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="icon" href="imagenes/logo.png" type="image/png">
+</head>
+<body>
+
+<header class="sticky-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="imagenes/logo.png" alt="Clínica Salud Total" class="logo-img">
+      <h1>Panel Admin</h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="#pacientes">Pacientes</a>
+      <a href="#doctores">Doctores</a>
+      <a href="#usuarios">Usuarios</a>
+      <a href="#configuracion">Configuración</a>
+    </nav>
+  </div>
+</header>
+
+<main id="admin-panel" class="container">
+  <!-- Gestión de Pacientes -->
+  <section id="pacientes" class="admin-section">
+    <h2>Gestión de Pacientes</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan Pérez</td>
+            <td>juan@correo.com</td>
+            <td>987654321</td>
+            <td>
+              <button class="btn">Editar</button>
+              <button class="btn danger">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>María López</td>
+            <td>maria@correo.com</td>
+            <td>912345678</td>
+            <td>
+              <button class="btn">Editar</button>
+              <button class="btn danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Gestión de Doctores -->
+  <section id="doctores" class="admin-section">
+    <h2>Gestión de Doctores</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Especialidad</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dr. Miguel Pando</td>
+            <td>Cardiología</td>
+            <td>miguel@clinica.com</td>
+            <td>
+              <button class="btn">Editar</button>
+              <button class="btn danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Gestión de Usuarios -->
+  <section id="usuarios" class="admin-section">
+    <h2>Gestión de Usuarios</h2>
+    <form>
+      <div class="form-grid">
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <select required>
+          <option value="">Seleccionar Rol</option>
+          <option value="admin">Administrador</option>
+          <option value="doctor">Doctor</option>
+          <option value="paciente">Paciente</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Registrar Usuario</button>
+    </form>
+  </section>
+
+  <!-- Configuración -->
+  <section id="configuracion" class="admin-section">
+    <h2>Configuración de la Clínica</h2>
+    <form>
+      <div class="form-grid">
+        <input type="text" placeholder="Nombre de la clínica" value="Clínica Salud Total" required>
+        <input type="email" placeholder="Correo de contacto" value="clientes@clinicasaludtotal.pe" required>
+        <input type="tel" placeholder="Teléfono" value="(+51) 936-806-520" required>
+      </div>
+      <button type="submit" class="btn">Guardar Cambios</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Clínica Salud Total. Panel de Administración.</p>
+  </div>
+</footer>
+
+</body>
+</html>
